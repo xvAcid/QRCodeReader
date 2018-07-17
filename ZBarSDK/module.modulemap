@@ -1,0 +1,4 @@
+module ZBarSDK {
+    header "ZBarSDK_framework.h"
+    export *
+}

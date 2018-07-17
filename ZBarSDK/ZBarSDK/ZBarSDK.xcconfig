@@ -1,0 +1,8 @@
+CONFIGURATION_BUILD_DIR = ${PODS_CONFIGURATION_BUILD_DIR}/ZBarSDK
+EXCLUDED_SOURCE_FILE_NAMES[sdk=iphoneos*][arch=*] = ZBarReaderViewImpl_Simulator.m
+EXCLUDED_SOURCE_FILE_NAMES[sdk=iphonesimulator*][arch=*] = ZBarReaderViewImpl_Capture.m ZBarCaptureReader.m
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) NDEBUG=1
+HEADER_SEARCH_PATHS = "Headers/Private" "Headers/Public"
+OTHER_LDFLAGS = -l"iconv" -framework "AVFoundation" -framework "CoreGraphics" -framework "CoreMedia" -framework "CoreVideo" -framework "QuartzCore"
+PRODUCT_BUNDLE_IDENTIFIER = com.zbarsdk.${PRODUCT_NAME:rfc1034identifier}
+SKIP_INSTALL = YES
